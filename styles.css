@@ -99,7 +99,7 @@ div.background {
     background: #fff;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
     padding: 15px 40px;
-    width: 550px;
+    max-width: 550px;
     height: 220px;
     position: relative;
 }
@@ -344,4 +344,116 @@ div.footer h6 {
     color: #88949B;
     font-size: 1rem;
     padding-top: 6rem;
+}
+
+@media only screen and (max-width: 800px) {
+    div.nav-bar {
+        padding: 1rem 3rem;
+    }
+    
+    ul.nav-links {
+        height: 0px;
+        border: 1px solid white;
+        width: 25px;
+        float: right;
+        margin-top: 15px;
+    }
+    
+    ul.nav-links::before,
+    ul.nav-links::after {
+        content: '';
+        position: absolute;
+        height: 0px;
+        border: 1px solid white;
+        width: 20px;
+        margin-right: 20px;
+    }
+
+    ul.nav-links::before {
+        transform: translateY(-8px);
+    }
+
+    ul.nav-links::after {
+        transform: translateY(6px);
+    }
+
+    ul.nav-links li {
+        display: none;
+    }
+    
+    div.hero-section {
+        padding: 10rem 3rem;
+    }
+
+    div.hero-content-btn a {
+        padding: 5px 15px;
+        letter-spacing: unset;
+    }
+
+    div.hero-background {
+        padding: 5rem 3rem;
+    }
+
+    div.background {
+        height: unset;
+    }
+
+    div.background h4 {
+        padding: 1rem 0;
+        letter-spacing: unset;
+    }
+
+    div.background p {
+        padding-left: unset;
+        letter-spacing: unset;
+        width: 90%;
+    }
+
+    div.hero-background-pos {
+        right: 6%;
+        left: unset;
+        width: 80px;
+        height: 80px;
+    }
+
+    div.snapshot-team h2 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+    div.snapshot-team p {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    div.snapshot-box-content {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    div.footer-input {
+        display: block;
+    }
+
+    input[type="text"] {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    
+    input[type="email"] {
+        display: block;
+        width: 80%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    
+    textarea {
+        width: 80%;
+    }
+    
+    div.footer-btn a {
+        padding: 5px 25px;
+        letter-spacing: unset;
+    }
 }
